@@ -45,7 +45,7 @@ Future<void> updateNote(String id, String title, String content)async{
 Future<void> deleteNote(String id)async{
   try{
     await supabase
-    .from('notes')
+    .from('Notes')
     .delete()
     .eq('id', id);
   }catch(e){
